@@ -1,0 +1,20 @@
+{
+    "name": "chat-node-grpc",
+    "version": "1.0.0",
+    "description": "Chat Node gRPC com envio de arquivos",
+    "main": "servidor.js",
+    "scripts": {
+      "proto": "npx grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=grpc_js:. --proto_path=. chat.proto",
+      "start-server": "node servidor.js",
+      "start-client": "node cliente.js"
+    },
+    "dependencies": {
+      "@grpc/grpc-js": "^1.9.14",
+      "@grpc/proto-loader": "^0.7.7",
+      "google-protobuf": "^3.21.2"
+    },
+    "devDependencies": {
+      "grpc-tools": "^1.11.2"
+    }
+  }
+  

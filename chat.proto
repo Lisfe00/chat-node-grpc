@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service SimpleChat {
+  rpc Chat(stream ChatMessage) returns (stream ChatMessage);
+}
+
+message ChatMessage {
+  string user = 1;
+  string text = 2;
+  string timestamp = 3;
+  bytes file = 4;
+  string filename = 5;
+}
